@@ -52,3 +52,22 @@ bool hayEmpate() {
                 return false;
     return true;
 }
+
+// Realiza una jugada
+void jugar() {
+    int opcion;
+    cout << "Turno del jugador " << jugador << " : ";
+    cin >> opcion;
+
+    int fila = (opcion - 1) / 3;
+    int col = (opcion - 1) % 3;
+
+    if(opcion < 1 || opcion > 9 || tablero[fila][col] == 'X' || tablero[fila][col] == 'O') {
+        cout << "Movimiento inválido\n";
+        cin.ignore();
+        cin.get();
+        return;
+    }
+
+    tablero[fila][col] = jugador;
+}
