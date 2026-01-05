@@ -22,3 +22,9 @@ void mostrarTablero() {
     }
     cout << "\n\n";
 }
+
+// Cambia de jugador
+void cambiarJugador() {
+    jugador = (jugador == 'X') ? 'O' : 'X';
+}
+
