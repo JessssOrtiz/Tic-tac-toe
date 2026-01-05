@@ -71,3 +71,26 @@ void jugar() {
 
     tablero[fila][col] = jugador;
 }
+
+int main() {
+    while(true) {
+        mostrarTablero();
+        jugar();
+
+        if(hayGanador()) {
+            mostrarTablero();
+            cout << "El jugador " << jugador << " gana\n";
+            break;
+        }
+
+        if(hayEmpate()) {
+            mostrarTablero();
+            cout << "Empate\n";
+            break;
+        }
+
+        cambiarJugador();
+    }
+
+    return 0;
+}
