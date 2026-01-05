@@ -42,3 +42,13 @@ bool hayGanador() {
         return true;
 
     return false;
+}
+
+// Verifica empate
+bool hayEmpate() {
+    for(int i = 0; i < 3; i++)
+        for(int j = 0; j < 3; j++)
+            if(tablero[i][j] != 'X' && tablero[i][j] != 'O')
+                return false;
+    return true;
+}
